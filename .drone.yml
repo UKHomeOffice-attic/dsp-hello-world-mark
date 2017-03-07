@@ -3,7 +3,7 @@ pipeline:
 
   build_image:
     commands:
-      - "docker build --label ${DRONE_BUILD_NUMBER} --build-arg BUILD_NUMBER=${DRONE_BUILD_NUMBER} -t dsp-hello-world-mark ."
+      - "docker build --label ${DRONE_BUILD_NUMBER} -t dsp-hello-world-mark ."
     environment:
       - "DOCKER_HOST=tcp://127.0.0.1:2375"
     image: docker:1.11
